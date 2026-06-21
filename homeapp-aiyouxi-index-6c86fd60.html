@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 快速识别游戏平台用途</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background: #f7f3ed;
+            color: #2c2c2c;
+            font-family: 'Georgia', 'Times New Roman', '宋体', 'SimSun', serif;
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+        }
+        .page {
+            max-width: 860px;
+            margin: 0 auto;
+            background: rgba(255, 251, 245, 0.75);
+            border-radius: 28px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+        }
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            border-left: 6px solid #8b7a62;
+            padding-left: 1.2rem;
+            color: #3a322a;
+        }
+        .subhead {
+            font-size: 1rem;
+            color: #7a6e5e;
+            margin-bottom: 2.2rem;
+            padding-left: 1.8rem;
+            border-bottom: 1px dashed #d6cdbd;
+            padding-bottom: 0.8rem;
+        }
+        .hero-card {
+            background: #ede7db;
+            border-radius: 24px;
+            padding: 2rem 2.2rem;
+            margin-bottom: 2.8rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+            align-items: center;
+        }
+        .hero-card .text {
+            flex: 2 1 260px;
+        }
+        .hero-card .text p {
+            margin-bottom: 1.2rem;
+            font-size: 1.08rem;
+        }
+        .hero-card .text p:last-child {
+            margin-bottom: 0;
+        }
+        .hero-card .visual-tag {
+            flex: 0 0 140px;
+            height: 100px;
+            background: linear-gradient(145deg, #c7b9a4, #b6a68e);
+            border-radius: 60px 20px 20px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2b241c;
+            font-weight: 500;
+            font-size: 1.4rem;
+            letter-spacing: 4px;
+            box-shadow: inset 0 -2px 6px rgba(0,0,0,0.06);
+        }
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 450;
+            margin: 2.4rem 0 1.2rem 0;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid #d6cdbd;
+            display: inline-block;
+            color: #3d352c;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.6rem;
+            margin: 1.8rem 0 2rem 0;
+        }
+        .card {
+            background: #fdfaf5;
+            border-radius: 20px;
+            padding: 1.6rem 1.4rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            border: 1px solid #e7dfd1;
+            transition: transform 0.1s ease;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        }
+        .card h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #4e4238;
+            margin-bottom: 0.6rem;
+            letter-spacing: 0.5px;
+        }
+        .card p {
+            font-size: 0.98rem;
+            color: #444;
+        }
+        .callout {
+            background: #e6ddd0;
+            border-left: 8px solid #8b7a62;
+            border-radius: 0 20px 20px 0;
+            padding: 1.4rem 1.8rem;
+            margin: 2.4rem 0 1.8rem 0;
+            font-style: normal;
+        }
+        .callout p {
+            margin-bottom: 0.6rem;
+        }
+        .callout p:last-child {
+            margin-bottom: 0;
+        }
+        .inline-link {
+            color: #6b5b49;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1.5px;
+            text-decoration-color: #b7a892;
+            font-weight: 500;
+        }
+        .inline-link:hover {
+            color: #3a2f24;
+            text-decoration-color: #6b5b49;
+        }
+        .faq-mini {
+            margin-top: 2.8rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #ddd2c0;
+        }
+        .faq-item {
+            margin-bottom: 1rem;
+        }
+        .faq-item strong {
+            color: #3d352c;
+            font-weight: 550;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        .faq-item p {
+            color: #4f463b;
+            font-size: 0.98rem;
+            padding-left: 0.6rem;
+        }
+        .footnote {
+            margin-top: 2.4rem;
+            font-size: 0.9rem;
+            color: #7f7466;
+            text-align: center;
+            border-top: 1px dashed #ddd2c0;
+            padding-top: 1.6rem;
+        }
+        @media (max-width: 600px) {
+            body { padding: 1rem 0.8rem; }
+            .page { padding: 1.6rem 1.2rem; }
+            h1 { font-size: 1.9rem; padding-left: 0.8rem; }
+            .hero-card { padding: 1.4rem; }
+            .hero-card .visual-tag { flex-basis: 80px; height: 70px; font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <h1>爱游戏 · 用途与定位</h1>
+    <div class="subhead">一个帮助用户快速判断网站是否匹配自己需求的说明页</div>
+
+    <!-- 主视觉 + 核心定位 -->
+    <div class="hero-card">
+        <div class="text">
+            <p>当你打开一个陌生的游戏类网站，最直接的疑问往往是：<strong>这个平台提供什么？</strong> 它侧重社区讨论、工具辅助、资讯聚合，还是直接的游戏资源？</p>
+            <p><a href="https://homeapp-aiyouxi.com.cn" class="inline-link">爱游戏</a> 的页面结构指向一个整合型站点：它试图将游戏信息、爱好者的共同兴趣以及检索功能放在一起，让来访者不必在多个页面之间反复跳转，就能获得相对完整的概览。</p>
+        </div>
+        <div class="visual-tag">🎮 识别</div>
+    </div>
+
+    <!-- 用途卡片：从用户快速识别角度 -->
+    <div class="section-title">常见用途速览</div>
+    <div class="card-grid">
+        <div class="card">
+            <h3>信息聚合</h3>
+            <p>将游戏名称、简介、相关资源或更新动态汇集在同一界面，减少来回切换的成本。适合希望一次性了解多个游戏要点的用户。</p>
+        </div>
+        <div class="card">
+            <h3>兴趣发现</h3>
+            <p>通过分类或推荐形式展示内容，帮助用户从大量选项中定位自己可能感兴趣的方向，而非漫无目的地搜索。</p>
+        </div>
+        <div class="card">
+            <h3>轻量工具</h3>
+            <p>部分页面可能集成快速查询、标签筛选或简易收藏功能，让查找过程更直接，不依赖外部搜索引擎。</p>
+        </div>
+    </div>
+
+    <!-- 适合人群段落 + 自然引用块 -->
+    <div class="section-title">适合哪些人使用</div>
+    <p style="margin-bottom: 1rem;">并不是所有游戏类网站都面向同一类受众。从「爱游戏」目前的呈现逻辑来看，它更适合以下三种场景：</p>
+    <div class="callout">
+        <p>◈ 想要集中浏览不同游戏的基本信息，而不想逐个访问官网或维基的用户。</p>
+        <p>◈ 对游戏种类尚未形成明确偏好，希望借助分类或推荐来探索新方向的爱好者。</p>
+        <p>◈ 需要快速确认某个游戏的梗概、关键词或所属系列，以辅助讨论或决策。</p>
+        <p style="margin-top: 0.6rem; font-style: italic; color: #4f463b;">—— 换言之，这是一个偏向“索引+概览”性质的页面，而非深度评测或下载通道。</p>
+    </div>
+
+    <!-- 自然链接段落，承接上文 -->
+    <p>如果你正在寻找一个可以快速预览游戏内容、并以此为起点进一步查找详细资料的入口，<a href="https://homeapp-aiyouxi.com.cn" class="inline-link">爱游戏</a> 的首页设计意图正在于此。它将常见的浏览路径浓缩在单一视图中，省去了翻阅多个标签页的琐碎感。</p>
+
+    <!-- 类似FAQ的摘要，但保持自然 -->
+    <div class="faq-mini">
+        <div class="section-title" style="margin-top:0; border-bottom-width:1px;">你可能关心的问题</div>
+        <div class="faq-item">
+            <strong>这个网站是游戏下载站吗？</strong>
+            <p>根据首页内容判断，它更偏向信息展示和兴趣索引，而非直接提供安装文件或破解资源。具体功能建议直接浏览其导航和分类进一步确认。</p>
+        </div>
+        <div class="faq-item">
+            <strong>页面里的游戏信息来自哪里？</strong>
+            <p>通常这类站点会汇总公开的游戏资料、社区标签或编辑推荐，具体来源可在网站内部的相关说明或关于页面中查证。</p>
+        </div>
+        <div class="faq-item">
+            <strong>我能否在这里找到冷门游戏？</strong>
+            <p>取决于站点的收录范围。部分聚合类网站会涵盖较广泛的标题，包括一些非热门作品，但这需要实际浏览后才能确定。</p>
+        </div>
+    </div>
+
+    <div class="footnote">
+        本介绍页仅作用途说明，与具体游戏版权无关。如需了解完整功能，可访问 <a href="https://homeapp-aiyouxi.com.cn" class="inline-link">爱游戏</a> 查看更多内容。
+    </div>
+</div>
+</body>
+</html>
