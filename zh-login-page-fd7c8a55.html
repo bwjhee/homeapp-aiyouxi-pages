@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1xbet 综合信息参考页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f9fafb;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1e293b;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        /* 顶部导航 */
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e2e8f0;
+            margin-bottom: 2.8rem;
+        }
+        .nav-brand {
+            font-weight: 600;
+            font-size: 1.2rem;
+            letter-spacing: -0.01em;
+            color: #0f172a;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            list-style: none;
+            font-size: 0.95rem;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #334155;
+            padding: 0.25rem 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+        .nav-links a:hover {
+            border-bottom-color: #3b82f6;
+        }
+
+        /* 标题体系 */
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.25;
+            margin-bottom: 0.75rem;
+            color: #0f172a;
+        }
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            margin-top: 2.8rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 1px solid #e2e8f0;
+            color: #1e293b;
+        }
+        h3 {
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin-top: 1.8rem;
+            margin-bottom: 0.4rem;
+            color: #1e293b;
+        }
+
+        /* 正文 */
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            border-bottom: 1px dotted #94a3b8;
+        }
+        a:hover {
+            color: #1d4ed8;
+            border-bottom-color: #1d4ed8;
+        }
+
+        /* 卡片场景区块 */
+        .scenes {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 1.2rem;
+        }
+        .scene-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 1.6rem 1.8rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02);
+            transition: box-shadow 0.2s;
+            border: 1px solid #f1f5f9;
+        }
+        .scene-card:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        }
+        .scene-card .emoji-label {
+            font-size: 1.5rem;
+            margin-right: 0.4rem;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .scene-card h3 {
+            margin-top: 0;
+            display: inline-block;
+            vertical-align: middle;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .scene-card p {
+            margin: 0.6rem 0 0 0;
+            font-size: 0.95rem;
+            color: #334155;
+        }
+
+        /* FAQ 摘要 */
+        .faq-mini {
+            background: #f1f5f9;
+            border-radius: 14px;
+            padding: 1.8rem 2rem;
+            margin-top: 2.8rem;
+        }
+        .faq-mini h2 {
+            margin-top: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+            font-size: 1.3rem;
+        }
+        .faq-item {
+            margin: 1.2rem 0;
+        }
+        .faq-question {
+            font-weight: 500;
+            margin-bottom: 0.15rem;
+        }
+        .faq-answer {
+            color: #475569;
+            font-size: 0.95rem;
+        }
+
+        /* 底部 */
+        footer {
+            margin-top: 3.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.85rem;
+            color: #64748b;
+            text-align: center;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.6rem;
+            }
+            .nav-links {
+                gap: 1.2rem;
+                flex-wrap: wrap;
+            }
+            .scene-card {
+                padding: 1.2rem 1.2rem;
+            }
+            .faq-mini {
+                padding: 1.2rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- 顶部导航 -->
+    <nav>
+        <span class="nav-brand">参考·1xbet</span>
+        <ul class="nav-links">
+            <li><a href="#intro">概述</a></li>
+            <li><a href="#scenes">场景</a></li>
+            <li><a href="#faq">常见说明</a></li>
+        </ul>
+    </nav>
+
+    <!-- 核心介绍 -->
+    <section id="intro">
+        <h1>关于 1xbet 的基础介绍</h1>
+        <p>
+            这个页面整理了一些与 <a href="https://zh-login-1xbet.com">1xbet</a> 相关的日常信息，
+            从基础查询、功能对照到延伸阅读，尽量保持条目化与清晰。如果你正在了解或使用相关服务，
+            下面三个场景模块或许能提供一些参照。
+        </p>
+        <p>
+            无论是初次接触，还是希望梳理常见疑问，都可以把这里当做一份轻量的说明页。
+            所有内容均来自公开信息与一般性整理，不构成任何操作建议。
+        </p>
+    </section>
+
+    <!-- 三个场景模块 -->
+    <section id="scenes">
+        <h2>三个常见使用场景</h2>
+        <div class="scenes">
+            <div class="scene-card">
+                <div>
+                    <span class="emoji-label">🔍</span><h3>日常查询</h3>
+                </div>
+                <p>
+                    当需要查找有关 <a href="https://zh-login-1xbet.com">1xbet</a> 的基本信息、最新可用链接或功能更新时，
+                    保持一个可靠的查询路径很有帮助。建议从官方或经过验证的渠道获取第一手资料，
+                    避免信息滞后或失准。
+                </p>
+            </div>
+            <div class="scene-card">
+                <div>
+                    <span class="emoji-label">📋</span><h3>功能对照</h3>
+                </div>
+                <p>
+                    不同版本或不同地区的服务界面可能存在差异。通过对照操作流程、注册选项以及账户管理方式，
+                    可以更快理解当前版本的设计逻辑。部分用户会整理一份简易对照表，方便快速定位所需功能。
+                </p>
+            </div>
+            <div class="scene-card">
+                <div>
+                    <span class="emoji-label">📎</span><h3>延伸阅读</h3>
+                </div>
+                <p>
+                    除了基础操作，一些用户也会关注平台的安全设置、常见协议条款以及使用注意事项。
+                    花时间阅读官方帮助中心或社区讨论帖，有助于形成更全面的认知。对于 <a href="https://zh-login-1xbet.com">1xbet</a> 而言，
+                    保持对官方公告的关注是比较稳妥的方式。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见说明 / FAQ 摘要 -->
+    <section id="faq">
+        <div class="faq-mini">
+            <h2>常见说明摘要</h2>
+            <div class="faq-item">
+                <div class="faq-question">Q：如何确认当前使用的是最新界面？</div>
+                <div class="faq-answer">
+                    建议直接通过官方域名访问，并检查页面底部通常显示的版本标识或版权年份。
+                    第三方镜像或转载可能不包含最新调整。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Q：忘记账户信息后有哪些查找方式？</div>
+                <div class="faq-answer">
+                    大部分服务支持通过注册邮箱或手机号找回。如果遇到困难，可以尝试联系帮助中心，
+                    或查阅站内“忘记密码”指引。注意不要向非官方渠道透露账户信息。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Q：关于数据隐私与安全，有什么基本建议？</div>
+                <div class="faq-answer">
+                    使用独立的强密码、开启双重验证（若支持）、定期检查登录设备列表，都是通用做法。
+                    对于任何平台，保持警惕并遵守当地法律法规都是必要的。
+                </div>
+            </div>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: #475569;">
+                ⚡ 以上说明仅为摘要，具体操作请以平台官方实时规则为准。
+            </p>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer>
+        <p>整理自公开信息 · 仅供一般性参考 · 页面内容不构成任何形式的引导</p>
+    </footer>
+
+</div>
+</body>
+</html>
